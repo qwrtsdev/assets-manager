@@ -1,0 +1,208 @@
+/* ! GLOBAL */
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.maintheme {
+    background: linear-gradient(135deg, #1565c0, #0d47a1) !important;
+}
+
+/* ! NAVBAR */
+.main-header {
+    position: relative;
+    z-index: 1000;
+}
+
+.main-header .navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    padding: 0.2rem 0.4rem;
+    min-height: 50px;
+}
+
+.main-header .container {
+    display: flex;
+    width: 100%;
+}
+
+.main-header .container .navbar-brand {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: white !important;
+    padding: 0.2rem 0.4rem;
+}
+
+/* nav-link states */
+.main-header .container .nav-item .nav-link {
+    color: rgba(255,255,255,0.9) !important;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+}
+.main-header .container .nav-item .nav-link:hover {
+    color: white !important;
+    background-color: rgba(255,255,255,0.1);
+}
+.main-header .container .nav-item .nav-link i {
+    margin-right: 3px;
+    font-size: 1rem;
+}
+
+.main-header .container .nav-item .dropdown {
+    position: relative;
+}
+
+.main-header .container .nav-item .dropdown-menu {
+    position: absolute;
+    background: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 0.5rem;
+    min-width: 200px;
+    z-index: 1050;
+}
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2000;
+}
+.nav-item.dropdown:hover > .dropdown-menu {
+    display: block !important;
+}
+
+/* dropdown-item states */
+.main-header .container .nav-item .dropdown-menu .dropdown-item {
+    color: #2c3e50;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.main-header .container .nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #1565c0;
+}
+.main-header .dropdown-menu .dropdown-item .moving-text {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.main-header .dropdown-menu .dropdown-item:hover .moving-text {
+    transform: translateX(5px);
+}
+.main-header .container .nav-item .dropdown-menu .dropdown-item i {
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+    color: #1565c0;
+}
+
+/* ! SEARCH */
+.search-container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.search-input {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 8px 20px;
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-button:hover {
+    background-color: #283593;
+}
+
+/* ! TABLE */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    max-width: 100%;
+    scrollbar-width: thin;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+table {
+    width: 100%;
+    table-layout: auto;
+    max-width: 100%;
+}
+
+th, td {
+    white-space: nowrap;
+    overflow: visible;
+    padding: 8px 12px;
+}
+
+.group-even {
+    background-color: #e8edff;
+}
+
+.group-odd {
+    background-color: #ffffff;
+}
+
+/* ! CUSTOM */
+.page-title {
+    color: #1a237e;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.active {
+    background-color: rgb(201, 210, 255) !important;
+}
+
+.bg-success { background-color: #28a745 !important; color: white; }
+.bg-warning { background-color: #ffc107 !important; color: black; }
+.bg-danger { background-color: #dc3545 !important; color: white; }
+.bg-info { background-color: #17a2b8 !important; color: white; }
+.bg-secondary { background-color: #6c757d !important; color: white; }
+.bg-primary { background-color: #007bff !important; color: white; }
+
+/* ! RESPONSIVE */
+@media (min-width: 992px) {
+    .main-header .container {
+        flex-direction: row !important;
+        justify-content: flex-end;
+    }
+
+    .main-header .container .navbar-nav {
+        display: flex;
+    }
+}

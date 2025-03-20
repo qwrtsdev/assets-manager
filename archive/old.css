@@ -1,0 +1,373 @@
+/* Content styles - for all pages except header */
+.content-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.page-title {
+    color: #1a237e;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1a237e, #283593);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card {
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 0.6rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+}
+
+.card-body {
+    padding: 0.6rem;
+}
+
+h1 {
+    color: #1a237e;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Base table styles */
+table {
+    overflow: hidden;
+}
+
+.base-table {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.8rem;
+    border: 1px solid #e0e0e0;
+    overflow: scroll;
+}
+
+.base-table thead th {
+    background: linear-gradient(to bottom, #f8f9fa, #f1f3f5);
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 12px;
+    border-bottom: 2px solid #dee2e6;
+    text-align: left;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.base-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e9ecef;
+    color: #444;
+    vertical-align: middle;
+}
+
+.base-table tbody tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+.base-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Apply base styles to each unique table */
+.computer-table,
+.monitor-table,
+.mouse-table,
+.keyboard-table,
+.powersup-table,
+.repairs-table {
+    composes: base-table;
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.8rem;
+    border: 1px solid #e0e0e0;
+}
+
+.computer-table th,
+.monitor-table th,
+.mouse-table th,
+.keyboard-table th,
+.powersup-table th,
+.repairs-table th {
+    background: linear-gradient(to bottom, #f8f9fa, #f1f3f5);
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 12px;
+    border-bottom: 2px solid #dee2e6;
+    text-align: left;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.computer-table td,
+.monitor-table td,
+.mouse-table td,
+.keyboard-table td,
+.powersup-table td,
+.repairs-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e9ecef;
+    color: #444;
+    vertical-align: middle;
+}
+
+.computer-table tr:hover,
+.monitor-table tr:hover,
+.mouse-table tr:hover,
+.keyboard-table tr:hover,
+.powersup-table tr:hover,
+.repairs-table tr:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+/* Custom styles for each table type */
+.computer-table thead th { border-bottom-color: #1565c0; }
+.monitor-table thead th { border-bottom-color: #0097a7; }
+.mouse-table thead th { border-bottom-color: #00897b; }
+.keyboard-table thead th { border-bottom-color: #43a047; }
+.powersup-table thead th { border-bottom-color: #7cb342; }
+.repairs-table thead th { border-bottom-color: #fb8c00; }
+
+/* Responsive table wrapper */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+    box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.05);
+}
+
+/* Table header icons */
+.computer-table th i,
+.monitor-table th i,
+.mouse-table th i,
+.keyboard-table th i,
+.powersup-table th i,
+.repairs-table th i {
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+/* Status badge styles in tables */
+.computer-table .badge,
+.monitor-table .badge,
+.mouse-table .badge,
+.keyboard-table .badge,
+.powersup-table .badge,
+.repairs-table .badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+    font-weight: 500;
+    border-radius: 4px;
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Action buttons in tables */
+.computer-table .btn-action,
+.monitor-table .btn-action,
+.mouse-table .btn-action,
+.keyboard-table .btn-action,
+.powersup-table .btn-action,
+.repairs-table .btn-action {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+    margin: 0 0.2rem;
+    transition: all 0.2s ease;
+}
+
+/* Empty state styling */
+.computer-table tr.no-data td,
+.monitor-table tr.no-data td,
+.mouse-table tr.no-data td,
+.keyboard-table tr.no-data td,
+.powersup-table tr.no-data td,
+.repairs-table tr.no-data td {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+
+
+/* Status badge styles */
+.badge {
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 500;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.bg-success { background-color: #28a745 !important; color: white; }
+.bg-warning { background-color: #ffc107 !important; color: black; }
+.bg-danger { background-color: #dc3545 !important; color: white; }
+.bg-info { background-color: #17a2b8 !important; color: white; }
+.bg-secondary { background-color: #6c757d !important; color: white; }
+.bg-primary { background-color: #007bff !important; color: white; }
+
+/* Button styles */
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.76562rem;
+    border-radius: 0.2rem;
+}
+
+.btn-warning {
+    color: #000;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    color: #000;
+    background-color: #ffca2c;
+    border-color: #ffc720;
+}
+
+/* Utility classes */
+.mt-4 { margin-top: 1.5rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.ms-auto { margin-left: auto !important; }
+
+aside {
+    flex: 0 0 120px;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-top: -20px;
+}
+form {
+    margin-bottom: 20px;
+}
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+input[type="text"], select, input[type="number"], input[type="date"], input[type="month"] {
+    width: 100%;
+    padding: 1px;
+    font-size: 14px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    line-height: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px #999;
+    transition: background-color 0.3s;
+    width: 120px;
+}
+
+.button:hover {
+    background-color: #ffad33;
+}
+
+.button:active {
+    background-color: #ffad33;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.cancel-button {
+    background-color: yellow;
+    color: black;
+    border: none;
+}
+
+.cancel-button:hover {
+    background-color: #f3f300;
+}
+
+.cancel-button:active {
+    background-color: #e6e600;
+    transform: translateY(2px);
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    background-color: #e57373;
+}
+
+.delete-button:active {
+    background-color: #e57373;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.radio-inline {
+    display: inline-block;
+    margin-right: 15px;
+}
